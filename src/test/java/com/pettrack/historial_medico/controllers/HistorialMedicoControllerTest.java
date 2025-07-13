@@ -3,12 +3,17 @@ package com.pettrack.historial_medico.controllers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pettrack.historial_medico.models.HistorialMedico;
 import com.pettrack.historial_medico.services.HistorialMedicoService;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,6 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(HistorialMedicoController.class)
 
 class HistorialMedicoControllerTest {
+
     @Autowired
     private MockMvc mockMvc;
 

@@ -8,6 +8,7 @@ class HistorialMedicoApplicationTests {
 
 	@Test
 	void contextLoads() {
+		 HistorialMedicoApplication.main(new String[] {});
 	}
 
 }
